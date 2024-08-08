@@ -1,5 +1,10 @@
 # frozen_string_literal: true
 
+# This is an excessive timeout, however it's meant to ensure that we don't
+# have flaky timeouts in CI, which can be slow.
+# See https://gitlab.com/gitlab-org/gitlab/-/merge_requests/161969
+BANZAI_FILTER_TIMEOUT_MAX = 30.seconds
+
 # These shared_examples require the following variables:
 # - text: The text to be run through the filter
 #
@@ -139,5 +144,29 @@ RSpec.shared_examples 'pipeline timing check' do |context: {}|
 
     filter = described_class.new('text', context)
     filter.call
+  end
+end
+
+# Usage:
+#
+#   it_behaves_like 'limits the number of filtered items' do
+#     let(:text) { 'some text' }
+#     let(:ends_with) { 'result should end with this text' }
+#   end
+RSpec.shared_examples 'limits the number of filtered items' do |context: {}|
+  before do
+    stub_const('Banzai::Filter::FILTER_ITEM_LIMIT', 2)
+  end
+
+  it 'enforces limits' do
+    result = if defined?(filter_result)
+               filter_result
+             else
+               filter(text, context)
+             end
+
+    result = result.to_html unless result.is_a?(String)
+
+    expect(result).to end_with ends_with
   end
 end

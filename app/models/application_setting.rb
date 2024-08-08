@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-class ApplicationSetting < MainClusterwide::ApplicationRecord
+class ApplicationSetting < ApplicationRecord
   include CacheableAttributes
   include CacheMarkdownField
   include TokenAuthenticatable
@@ -533,6 +533,7 @@ class ApplicationSetting < MainClusterwide::ApplicationRecord
       :container_registry_token_expire_delay,
       :housekeeping_optimize_repository_period,
       :inactive_projects_delete_after_months,
+      :max_artifacts_content_include_size,
       :max_artifacts_size,
       :max_attachment_size,
       :max_yaml_depth,

@@ -20,7 +20,7 @@ To use Code Suggestions, use one of these editor extensions:
 
 | IDE                                                                        | Extension                                                                                                                   |
 |----------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------|
-| Visual Studio Code (VS Code)                                               | [VS Code GitLab Workflow extension](https://marketplace.visualstudio.com/items?itemName=GitLab.gitlab-workflow)             |
+| Visual Studio Code (VS Code)                                               | [GitLab Workflow for VS Code](https://marketplace.visualstudio.com/items?itemName=GitLab.gitlab-workflow)             |
 | [GitLab Web IDE (VS Code in the Cloud)](../../../project/web_ide/index.md) | No configuration required.                                                                                                  |
 | Microsoft Visual Studio (2022 for Windows)                                 | [Visual Studio GitLab extension](https://marketplace.visualstudio.com/items?itemName=GitLab.GitLabExtensionForVisualStudio) |
 | JetBrains IDEs                                                             | [GitLab Duo Plugin for JetBrains](https://plugins.jetbrains.com/plugin/22325-gitlab-duo)                                    |
@@ -121,7 +121,7 @@ When you're ready to start coding:
 1. Open relevant files, including configuration files, to provide better context.
 1. Close any files you don't want to be used as context.
 
-## View Multiple Code Suggestions
+## View multiple code suggestions
 
 > - [Introduced](https://gitlab.com/gitlab-org/gitlab-vscode-extension/-/issues/1325) in GitLab 17.1.
 
@@ -130,10 +130,14 @@ might be available. To view all available suggestions:
 
 1. Hover over the code completion suggestion.
 1. Scroll through the alternatives. Either:
-   - Use keyboard shortcuts. Press <kbd>Option</kbd> + <kbd>`]`</kbd> to view the
-     next suggestion, and <kbd>Option</kbd> + <kbd>`[`</kbd> to view the previous
-     suggestions.
-   - Select the right or left arrow to see next or previous options.
+   - Use keyboard shortcuts:
+     - On a Mac, press <kbd>Option</kbd> + <kbd>]</kbd> to view the
+       next suggestion, and <kbd>Option</kbd> + <kbd>&#91;</kbd> to view the previous
+       suggestions.
+     - On Windows, press <kbd>Alt</kbd> + <kbd>]</kbd> to view the
+       next suggestion, and <kbd>Alt</kbd> + <kbd>&#91;</kbd> to view the previous
+       suggestions.
+   - On the dialog that's displayed, select the right or left arrow to see next or previous options.
 1. Press <kbd>Tab</kbd> to apply the suggestion you prefer.
 
 ## Add additional languages for Code Suggestions
@@ -144,7 +148,7 @@ you can add support for it locally.
 Prerequisites:
 
 - You have installed and enabled the
-  [GitLab Workflow extension for VS Code](../../../../editor_extensions/visual_studio_code/index.md#download-the-extension).
+  [GitLab Workflow extension for VS Code](../../../../editor_extensions/visual_studio_code/index.md).
 - You have completed the [extension setup](https://gitlab.com/gitlab-org/gitlab-vscode-extension/#setup)
   instructions, and authorized the extension to access your GitLab account.
 
