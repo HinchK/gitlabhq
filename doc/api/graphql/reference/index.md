@@ -10729,6 +10729,7 @@ Input type: `WorkItemCreateInput`
 | <a id="mutationworkitemcreateprojectpath"></a>`projectPath` **{warning-solid}** | [`ID`](#id) | **Deprecated:** Please use namespace_path instead. That will cover for both projects and groups. Deprecated in GitLab 15.10. |
 | <a id="mutationworkitemcreaterolledupdateswidget"></a>`rolledupDatesWidget` **{warning-solid}** | [`WorkItemWidgetRolledupDatesInput`](#workitemwidgetrolledupdatesinput) | **Deprecated:** **Status**: Experiment. Introduced in GitLab 16.9. |
 | <a id="mutationworkitemcreatetitle"></a>`title` | [`String!`](#string) | Title of the work item. |
+| <a id="mutationworkitemcreateweightwidget"></a>`weightWidget` | [`WorkItemWidgetWeightInput`](#workitemwidgetweightinput) | Input for weight widget. |
 | <a id="mutationworkitemcreateworkitemtypeid"></a>`workItemTypeId` | [`WorkItemsTypeID!`](#workitemstypeid) | Global ID of a work item type. |
 
 #### Fields
@@ -19756,6 +19757,8 @@ GitLab CI/CD configuration template.
 
 | Name | Type | Description |
 | ---- | ---- | ----------- |
+| <a id="cloudconnectorproberesultdetails"></a>`details` | [`JSON`](#json) | Additional details about the probe result. |
+| <a id="cloudconnectorproberesulterrors"></a>`errors` | [`[String!]`](#string) | Full list of errors about the probe result. |
 | <a id="cloudconnectorproberesultmessage"></a>`message` | [`String`](#string) | Additional message or details about the probe result. |
 | <a id="cloudconnectorproberesultname"></a>`name` | [`String`](#string) | Name of the probe. |
 | <a id="cloudconnectorproberesultsuccess"></a>`success` | [`Boolean`](#boolean) | Indicates if the probe was successful. |
@@ -26096,6 +26099,7 @@ Defines which user roles, users, or groups can merge into a protected branch.
 | <a id="mergerequestsupportslockonmerge"></a>`supportsLockOnMerge` | [`Boolean!`](#boolean) | Indicates if the merge request supports locked labels. |
 | <a id="mergerequesttargetbranch"></a>`targetBranch` | [`String!`](#string) | Target branch of the merge request. |
 | <a id="mergerequesttargetbranchexists"></a>`targetBranchExists` | [`Boolean!`](#boolean) | Indicates if the target branch of the merge request exists. |
+| <a id="mergerequesttargetbranchpath"></a>`targetBranchPath` | [`String`](#string) | Path to the target branch of the merge request. |
 | <a id="mergerequesttargetproject"></a>`targetProject` | [`Project!`](#project) | Target project of the merge request. |
 | <a id="mergerequesttargetprojectid"></a>`targetProjectId` | [`Int!`](#int) | ID of the merge request target project. |
 | <a id="mergerequesttaskcompletionstatus"></a>`taskCompletionStatus` | [`TaskCompletionStatus!`](#taskcompletionstatus) | Completion status of tasks. |

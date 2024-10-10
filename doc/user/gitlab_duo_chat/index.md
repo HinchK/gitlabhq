@@ -55,6 +55,7 @@ In the GitLab UI, GitLab Duo Chat knows about these areas:
 | Epics         | From the epic, ask about `this epic`, `this`, or the URL. From any UI area, ask about the URL.                   |
 | Issues        | From the issue, ask about `this issue`, `this`, or the URL. From any UI area, ask about the URL.                 |
 | Code files    | From the single file, ask about `this code` or `this file`. From any UI area, ask about the URL.                 |
+| Merge requests | From the merge request, ask about `this merge request`, `this`, or the URL. For more information, see [Ask about a specific merge request](examples.md#ask-about-a-specific-merge-request). |
 
 In the IDEs, GitLab Duo Chat knows about these areas:
 
@@ -145,12 +146,12 @@ After Quick Chat opens:
 1. In the message box, enter your question. The available commands are shown while you enter text:
    - Enter `/` to display all available commands.
    - Enter `/re` to display `/refactor`.
-1. To send your question, select **Send**, or press <kbd>Command<kbd> + <kbd>Enter<kbd>.
+1. To send your question, select **Send**, or press <kbd>Command</kbd> + <kbd>Enter</kbd>.
 1. To exit chat, either select the chat icon in the gutter, or press **Escape** while focused on the chat.
 
 ## Use GitLab Duo Chat in Visual Studio for Windows
 
-To use GitLab Duo Chat in the GitLab extension for Visual Studio: 
+To use GitLab Duo Chat in the GitLab extension for Visual Studio:
 
 1. Install and set up the extension for Visual Studio:
    1. In Visual Studio, download and install the [GitLab extension for Visual Studio](../../editor_extensions/visual_studio/index.md).
