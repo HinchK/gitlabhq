@@ -27,7 +27,6 @@ RSpec.describe 'new tables missing sharding_key', feature_category: :cell do
       'analytics_devops_adoption_segments.namespace_id',
       *['badges.project_id', 'badges.group_id'],
       *['boards.project_id', 'boards.group_id'],
-      *['bulk_import_exports.project_id', 'bulk_import_exports.group_id'],
       'ci_pipeline_schedules.project_id',
       'ci_sources_pipelines.project_id',
       'ci_triggers.project_id',
@@ -201,7 +200,10 @@ RSpec.describe 'new tables missing sharding_key', feature_category: :cell do
       "sbom_components" => 'https://gitlab.com/gitlab-org/gitlab/-/issues/469436',
       "sbom_component_versions" => 'https://gitlab.com/gitlab-org/gitlab/-/issues/483194',
       "subscription_user_add_on_assignments" => "https://gitlab.com/gitlab-org/gitlab/-/issues/480697",
-      "topics" => 'https://gitlab.com/gitlab-org/gitlab/-/issues/463254'
+      "topics" => 'https://gitlab.com/gitlab-org/gitlab/-/issues/463254',
+      "oauth_access_tokens" => "https://gitlab.com/gitlab-org/gitlab/-/issues/496717",
+      "oauth_access_grants" => "https://gitlab.com/gitlab-org/gitlab/-/issues/496717",
+      "oauth_openid_requests" => "https://gitlab.com/gitlab-org/gitlab/-/issues/496717"
     }
 
     organization_id_columns = ApplicationRecord.connection.select_rows(sql)
